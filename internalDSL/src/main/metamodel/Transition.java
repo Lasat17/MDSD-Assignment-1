@@ -13,6 +13,10 @@ public class Transition {
 	private boolean isConditionEqual;
 	private boolean isConditionLessThan;
 	private boolean isConditionGreaterThan;
+	private String getOperationVariableName;
+	private String getConditionVariableName;
+	private Integer getConditionComparedValue;
+	
 	
 	public Transition(String event, State to) {
 		super();
@@ -40,7 +44,7 @@ public class Transition {
 		// TODO Auto-generated method stub
 		return this.hasIncrementOperation;
 	}
-
+ 
 	public boolean hasDecrementOperation() {
 		// TODO Auto-generated method stub
 		return this.hasDecrementOperation;
@@ -48,7 +52,7 @@ public class Transition {
 
 	public String getOperationVariableName() {
 		// TODO Auto-generated method stub
-		return null;
+		return getOperationVariableName;
 	}
 	
 	public boolean isConditional() {
@@ -58,12 +62,12 @@ public class Transition {
 
 	public String getConditionVariableName() {
 		// TODO Auto-generated method stub
-		return null;
+		return getConditionVariableName;
 	}
 
 	public Integer getConditionComparedValue() {
 		// TODO Auto-generated method stub
-		return null;
+		return getConditionComparedValue;
 	}
 	
 	

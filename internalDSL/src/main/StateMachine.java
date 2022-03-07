@@ -18,7 +18,7 @@ public class StateMachine {
 	private State current;
 	private String currentEvent;
 	private Transition currentTrans;
-
+ 
 	private List<String> var = new ArrayList<String>();
 	
 
@@ -38,7 +38,7 @@ public class StateMachine {
 
 	public StateMachine state(String string) {
 		checkStateMachine(string);
-		current = getState(string);
+		current = states.get(string);
 		return this;
 	}
 
@@ -56,7 +56,7 @@ public class StateMachine {
 	}
 
 	public StateMachine when(String string) {
-		//sup da
+		
 		currentEvent = string;
 		return this;
 	}
@@ -75,7 +75,7 @@ public class StateMachine {
 	}
 
 	public StateMachine set(String string, int i) {
-		var.ad
+		
 		return null;
 	}
 

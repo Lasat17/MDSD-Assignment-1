@@ -7,7 +7,7 @@ public class State {
 
 	private String name;
 	private List<Transition> trans = new ArrayList<>();
-	
+ 	
 	public State(String name) {
 		super();
 		this.name = name;
@@ -21,8 +21,14 @@ public class State {
 	}
 
 	public Transition getTransitionByEvent(String string) {
-		// TODO Auto-generated method stub
-		return null;
+		for (Transition transition : trans) {
+			if(transition.getEvent().equalsIgnoreCase(string)) {
+				return transition;
+			}
+		}
+		
+		    return null;
+		
 	}
 	
 	public void addTransition(Transition t) {

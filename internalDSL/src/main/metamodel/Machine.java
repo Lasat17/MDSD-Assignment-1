@@ -18,7 +18,7 @@ public class Machine {
 			this.variable.put(name, 0);
 		}
 	}
-
+ 
 	public List<State> getStates() {		
 		return states;
 	}
@@ -29,19 +29,29 @@ public class Machine {
 	}
 
 	public State getState(String string) {
-		// TODO Auto-generated method stub
-		return states.get(states.indexOf(string)+1);
+		for(State s : states) {
+			if(s.getName().equalsIgnoreCase(string)) {
+				return s;
+			}
+			
+		}
 		
+		return null;
 	}
 
 	public int numberOfIntegers() {
 		// TODO Auto-generated method stub
-		return 0;
+		return variable.size();
 	}
 	
 	public boolean hasInteger(String string) {
 		// TODO Auto-generated method stub
-		return true;
+		return variable.containsKey(string);
+	}
+	
+	public int getInteger(String name) {
+		return variable.get(name);
+		
 	}
 
 }
